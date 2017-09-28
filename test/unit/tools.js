@@ -148,9 +148,6 @@ exports.commonUnit = function (Comp) {
 
   it('click a day will change selected day', (done) => {
     let vm = getRenderedVm(Comp)
-    const date = moment().date()
-    const dateInCalendar = vm.$el.querySelector(".days span .selected").innerText
-    expect(dateInCalendar.toString()).to.equal(date.toString())
 
     const $spans = vm.$el.querySelectorAll(".days span")
     const clickIndex = getUnPassiveDay($spans)
